@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Temas\temaOscuro\EstiloReco.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="temas.js"></script>
+  <title>AppVem</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <button><a href="Main.html"><span class="material-symbols-outlined">
+          home
+        </span></a></button>
+        <H1>Park&Son</H1>
+    <button><a href="MotorBusqueda.html"><span class="material-symbols-outlined">
+      search
+        </span></a></button>
+  </header>
+  <br>
+
+  <!-- Seccion Principal -->
+  <div class="section-1">
+    <h2>Rutina Personalizada</h2>
+  </div>
+  <br>
+
+  
+<!-- Seccion Galeria -->
+    
+   
+  <div class="section-nos">
+    <div>
+      <a href="rutinaShuffleFull.html" class="rutina-opcion">
+        <h3><span class="material-symbols-outlined">view_cozy</span>Rutina Full: 5 Ejercicios</h3>
+      </a>
+    </div>
+    <br>
+    <div>
+      <a href="rutinaShuffleMedia.html" class="rutina-opcion">
+        <h3><span class="material-symbols-outlined">view_cozy</span>Rutina Media: 4-3 Ejercicios</h3>
+      </a>
+    </div>
+    <br>
+    <div>
+      <a href="rutinaShuffleSuave.html" class="rutina-opcion">
+        <h3><span class="material-symbols-outlined">view_cozy</span>Rutina Suave 2 Ejercicios</h3>
+      </a>
+    </div>
+    <br>
+    <!-- Círculo verde parpadeante -->
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+      <div id="parpadeo" style="width: 30px; height: 30px; border-radius: 50%; background: #00ff00; box-shadow: 0 0 10px #00ff00;"></div>
+    </div>
+  </div>
+<br>
+
+  <!-- Footer -->
+<footer>
+  <p>© 2024 Park&Son</p>
+  <p>Todos los derechos reservados</p>
+</footer>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Parpadeo círculo verde
+    const parpadeo = document.getElementById('parpadeo');
+    let visible = true;
+    setInterval(() => {
+      visible = !visible;
+      parpadeo.style.opacity = visible ? '1' : '0.2';
+    }, 600);
+
+    // Reproducir audio al entrar o tras la primera interacción si es bloqueado
+    setTimeout(() => {
+      const audio = new Audio('radio/Asistente.mp3');
+      audio.volume = 0.7; // Ajustar volumen al 70%
+      audio.play().then(() => {
+        console.log('Audio reproducido correctamente');
+      }).catch((error) => {
+        console.warn('Reproducción automática bloqueada, esperando interacción del usuario...');
+        // Esperar la primera interacción del usuario para reproducir el audio
+        const playOnUserInteraction = () => {
+          audio.play().then(() => {
+            console.log('Audio reproducido tras interacción del usuario');
+            document.removeEventListener('click', playOnUserInteraction);
+          }).catch((err) => {
+            console.error('Error al reproducir el audio tras interacción:', err);
+          });
+        };
+        document.addEventListener('click', playOnUserInteraction);
+      });
+    }, 500); // Pequeño retraso para asegurar que la página esté completamente cargada
+  });
+
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+</body>
+</html>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Temas\temaOscuro\EstiloMain.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="temas.js"></script>
+  <script src="radio_player.js"></script>
+  <title>AppVem</title>
+  <style>
+    /* Estilos para el indicador de reproducción */
+    .radio-playing-indicator {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      display: none;
+      margin: 10px auto;
+      animation: pulse 1.5s infinite;
+    }
+    
+    /* Estilos para el enlace de radio */
+    .radio-link {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .radio-link:hover {
+      transform: translateY(-3px);
+    }
+    
+    .radio-link:active {
+      transform: translateY(1px);
+    }
+    .radio-status {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 5px rgba(76, 175, 80, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+  <header>
+    <button id="setting"><a href="Settings.html"><span class="material-symbols-outlined">
+      settings
+      </span></a></button>
+      <h1>Park&Son</h1>
+    <button><a href="MotorBusqueda.html"><span class="material-symbols-outlined">
+      search
+    </span></a></button>
+  </header>
+<br>
+
+<!-- Seccion de Terapias -->
+<h1 class="TextoSeccion">Terapias</h1>
+<div class="section-3">
+  <div>
+    <a href="RecoTerapias.html">
+    <h3><span class="material-symbols-outlined">
+      workspaces
+      </span>Todas las Terapias</h3>
+    <p>Aqui podra encontrar todas las terapias que nuestra app puede ofrecerle.</p> 
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+</div>
+
+<!-- Seccion de Recomendados -->
+<h1 class="TextoSeccion">Mas Recomendados</h1>
+
+<!-- Subseccion de Rutinas y Ejercicios -->
+<div class="section-2">
+  <div>
+    <a href="RecoRutinas.html">
+  <h3><span class="material-symbols-outlined">
+    map
+    </span><br>Rutinas</h3>
+    <p>Rutinas diseñadas para usted</p>
+    <button><span class="material-symbols-outlined">
+     right_click
+    </span></button>
+    </a>
+  </div>
+   
+  <div>
+    <a href="RecoEjercicios.html">
+    <h3><span class="material-symbols-outlined">
+      exercise
+      </span><br>Ejercicios</h3>
+    <p>Ejercicios diseñados para usted</p>
+    <button><span class="material-symbols-outlined">
+     right_click
+     </span></button>
+    </a>
+  </div>
+</div>
+<br>
+
+<!-- Radio VEM -->
+ <h1 class="TextoSeccion">Radio VEM 24/7</h1>
+<div class="section-3">
+  <div>
+    <a href="#" id="radio-vem-link" class="radio-link">
+    <h3><span class="material-symbols-outlined">
+      radio
+      </span>Escuchar Ahora</h3>
+    <p>Aquí podrá escuchar música relajante de manera ininterrumpida.</p> 
+    <button><span class="material-symbols-outlined">
+     play_pause
+    </span></button>
+    </a>
+    <div id="radio-status-indicator" class="radio-playing-indicator"></div>
+  </div>
+  <br>
+</div>
+
+<!-- Seccion Blog -->
+ <h1 class="TextoSeccion">Blog Informativo</h1>
+<div class="section-3">
+  <div>
+    <a href="BlogInfo.html">
+    <h3><span class="material-symbols-outlined">
+      auto_stories
+      </span>Nuestro Blog Informativo</h3>
+    <p>En este apartado hay disponibles artículos informativos especializados para nuestros usuarios.</p> 
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+</div>
+
+<!-- Seccion Shuffle -->
+ <h1 class="TextoSeccion">Generador de Rutinas</h1>
+<div class="section-3">
+  <div>
+    <a href="RutinaShuffleaForm.html">
+    <h3><span class="material-symbols-outlined">
+      Shuffle
+      </span>Nuestro Generador de Rutinas</h3>
+    <p>En este apartado podras encontrar rutinas personalizados para nuestros usuarios.</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+</div>
+
+<!-- Seccion de Nosotros -->
+<h1 class="TextoSeccion">Nosotros</h1>
+<div class="section-3">
+  <div>
+    <a href="Proyecto.html">
+    <h3><span class="material-symbols-outlined">
+      groups
+      </span>¿Quienes somos?</h3>
+    <p>Un vistazo a los que hemos creado esta app.</p> 
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Park&Son</p>
+  <p>Todos los derechos reservados</p>
+</footer>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+</body>
+</html>

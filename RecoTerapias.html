@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Temas\temaOscuro\EstiloMain.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="temas.js"></script>
+  <title>AppVem</title>
+</head>
+<body>
+<!-- Header -->
+  <header>
+    <button id="setting"><a href="Main.html"><span class="material-symbols-outlined">
+      home
+      </span></a></button>
+      <h1>Park&son</h1>
+    <button><a href="RutinaShuffleaForm.html"><span class="material-symbols-outlined">
+      shuffle
+    </span></a></button>
+  </header>
+<br>
+
+<!-- Seccion de Terapias -->
+<h1 class="TextoSeccion">Terapias</h1>
+
+<div class="section-3">
+
+  <div>
+    <a href="Yoga.html">
+    <h3><span class="material-symbols-outlined">
+      self_improvement
+      </span>Yoga</h3>
+    <p>El yoga aumenta fuerza, flexibilidad, equilibrio y alivia estrés mental.</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+    </div>
+    <br>
+  
+  <div>
+    <a href="Taichi.html">
+    <h3><span class="material-symbols-outlined">
+      physical_therapy
+      </span>Tai chi</h3>
+    <p>El Tai Chi mejora postura, circulación, y calma la mente.</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+
+  <div>
+    <a href="Musicoterapia.html">
+    <h3><span class="material-symbols-outlined">
+      music_note
+      </span>MusicoTerapia</h3>
+    <p>La musicoterapia estimula creatividad, mejora enfoque y fomenta serenidad.</p> 
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+  
+  <div>
+    <a href="ChiKung.html">
+    <h3><span class="material-symbols-outlined">
+      sports_gymnastics
+      </span>Chi Kung</h3>
+    <p>Ejercita tu cuerpo, concentra tu corazón y fotalece tu mente</p> 
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+  
+  <div>
+    <a href="Estiramiento.html">
+    <h3><span class="material-symbols-outlined">
+        emoji_people
+      </span>Estiramiento</h3>
+    <p>Los ejercicios de estiramiento potencian coordinación, destreza y bienestar psicológico.</p> 
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+  </div>
+  <br>
+
+  <div>
+    <a href="Meditación.html">
+    <h3><span class="material-symbols-outlined">
+      stress_management
+      </span>Meditación</h3>
+    <p>La meditación ayuda a enfocar la atención y mejorar la calma mental.</p>
+    <p>Expansión 2.0</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+    </div>
+    <br>
+
+<div>
+    <a href="Logopedia.html">
+    <h3><span class="material-symbols-outlined">
+      voice_selection
+      </span>Logopedia</h3>
+    <p>La meditación ayuda a enfocar la atención y mejorar la calma mental.</p>
+    <p>Expansión 2.0</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+    </div>
+    <br>
+
+    <div>
+    <a href="ArteTerapia.html">
+    <h3><span class="material-symbols-outlined">
+      draw
+      </span>ArteTerapia</h3>
+    <p>Facilita la expresión emocional no verbal, reduce el estrés, la ansiedad y la depresión.</p>
+    <p>Expansión 2.0</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+    </div>
+    <br>
+
+    <div>
+    <a href="RisoTerapia.html">
+    <h3><span class="material-symbols-outlined">
+      sentiment_excited
+      </span>RisoTerapia</h3>
+    <p>Reduce el estrés, mejora el ánimo y libera tensiones.</p>
+    <p>Expansión 2.0</p>
+    <button><span class="material-symbols-outlined">
+     touch_app
+    </span></button>
+    </a>
+    </div>
+    <br>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 Park&Son</p>
+  <p>Todos los derechos reservados</p>
+</footer>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+</body>
+</html>

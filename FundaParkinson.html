@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Temas\temaOscuro\EstiloProyecto.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="temas.js"></script>
+    <title>AppVem</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <button><a href="Main.html"><span class="material-symbols-outlined">
+                    home
+                </span></a></button>
+        <H1>Park&Son</H1>
+        <button><a href="MasNosotros.html"><span class="material-symbols-outlined">
+                    undo
+                </span></a></button>
+    </header>
+    <br>
+
+    <!-- Seccion Principal -->
+    <div class="section-1">
+        <h2>FundaParkinson</h2>
+        <img src="img/Fundaparkinson.jpg" alt="">
+        <p class="text-small">Fundación sin fines de lucro. 
+            Cuyo objeto es, informar y educar acerca de la Enfermedad de Parkinson a los pacientes, familiares y comunidad en general. 
+            Brindar apoyo social, fomentar actividades que ayuden a elevar el bienestar y calidad de vida de los pacientes y sus grupos familiares. 
+            Estimular la atención médica y psicológica de los pacientes a través de equipos multidisciplinarios</p><br>
+        <h2>Nuestro mensaje para la Fundación</h2>
+        <p class="text-small">Estimados miembros de FundaParkinson,<br><br>
+            Es con profundo respeto y sincera gratitud que nos dirigimos a ustedes en esta ocasión. Mi equipo y yo
+            deseamos expresar nuestro más sincero agradecimiento por el invaluable apoyo y la orientación que nos han
+            brindado durante el desarrollo de nuestro proyecto de bachillerato. <br><br>
+            Su compromiso con la investigación y el apoyo a la comunidad de Parkinson ha sido una fuente de inspiración
+            y un pilar fundamental para el éxito de nuestro proyecto. La generosidad de su tiempo, recursos y
+            conocimientos ha enriquecido nuestra experiencia educativa y nos ha permitido alcanzar metas que, sin su
+            ayuda, hubieran sido inalcanzables. <br><br>
+            Nos sentimos honrados de haber tenido la oportunidad de colaborar con una organización tan dedicada y
+            altruista. Por favor, reciban nuestro más profundo agradecimiento y sepan que su contribución ha dejado una
+            huella imborrable en nuestro camino académico y personal.
+            Con el mayor de los respetos, <br>El equipo de desarrollo.</p>
+    </div>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Park&Son</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>

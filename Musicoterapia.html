@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Temas\temaOscuro\EstiloTerapia.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="temas.js"></script>
+    <title>AppVem</title>
+</head> 
+
+<body>
+ 
+    <!-- Header -->
+    <header>
+        <button><a href="Main.html"><span class="material-symbols-outlined">
+                    home
+                </span></a></button>
+        <H1>Park&Son</H1>
+        <button><a href="RecoTerapias.html"><span class="material-symbols-outlined">
+          undo
+      </span></a></button>
+    </header>
+    <br>
+
+    <!-- Seccion Principal -->
+    <div class="section-1">
+        <h2>Musicoterapia
+        </h2>
+        <img src="img\Musicoterapia.jpg">
+        <p class="text-small">La musicoterapia es un tipo de terapia que utiliza la música como un medio para mejorar la salud y el bienestar, tanto 
+          físico como mental, de las personas.</p><br>
+        <h2>¿Por qué los ejercicios de musicoterapia?</h2>
+        <p class="text-small">Aumenta la dopamina natural endógena y así de forma indirecta se mejora el movimiento. También mejora la calidad de 
+          vida y el estado de ánimo</p>
+    </div>
+    <br>
+    <h1 class="TextoSeccion">Nuestros Ejercicios</h1>
+    <div class="section-galeria">
+
+        <a href="ejMusic1.html">
+        <div>
+        <img src="img\Musicoterapia.jpg" alt="">
+        <h4 class="text-small">Sesión 1</h4>
+        </div>
+        </a>
+         
+        <a href="ejMusic2.html">
+        <div>
+        <img src="img\Musicoterapia.jpg" alt="">
+        <h4 class="text-small">Sesión 2</h4>
+        </div>
+        </a>
+
+        <a href="ejMusic3.html">
+        <div>
+        <img src="img\Musicoterapia.jpg" alt="">
+        <h4 class="text-small">Sesión 3</h4>
+        </div>
+        </a>
+    </div>
+    <br>
+
+    <div class="section-galeria">
+
+        <a href="ejMusic4.html">
+        <div>
+        <img src="img\Musicoterapia.jpg" alt="">
+        <h4 class="text-small">Sesión 4</h4>
+        </div>
+        </a>
+         
+        <a href="ejMusic5.html">
+        <div>
+        <img src="img\Musicoterapia.jpg" alt="">
+        <h4 class="text-small">Sesión 5</h4>
+        </div>
+        </a>
+
+        <a href="ejMusic6.html">
+        <div>
+        <img src="img\Musicoterapia.jpg" alt="">
+        <h4 class="text-small">Sesión 6</h4>
+        </div>
+        </a>
+    </div>
+    <br>
+
+
+    <h1 class="TextoSeccion">Rutinas</h1>
+
+    <div class="section-nos">
+
+        <div>
+          <a href="rutMusic1.html">
+          <h3><span class="material-symbols-outlined">
+            music_note
+            </span>Rutina Melodía</h3>
+          </a>
+          </div>
+        <br>
+        
+        <div>
+          <a href="rutMusic2.html">
+          <h3><span class="material-symbols-outlined">
+            music_note
+            </span>Rutina Armonía</h3>
+          </a>
+        </div>
+        <br>
+      
+        <div>
+          <a href="rutMusic3.html">
+          <h3><span class="material-symbols-outlined">
+            music_note
+            </span>Rutina Sinfonía</h3>
+          </a>
+        </div>
+        <br>
+      
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Park&Son</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>

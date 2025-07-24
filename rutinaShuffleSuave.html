@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Temas/temaOscuro/EstiloEjercicio.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="temas.js"></script>
+  <title>Rutina Suave</title>
+</head>
+<body>
+  <header>
+    <button><a href="Main.html"><span class="material-symbols-outlined">home</span></a></button>
+    <h1>Park&Son</h1>
+    <button><a href="RutinaShuffleaForm.html"><span class="material-symbols-outlined">undo</span></a></button>
+  </header>
+  <br>
+  <h1 class="TextoSeccion">Rutina Suave (2 ejercicios)</h1>
+  <div class="section-ruti-container"></div>
+  <h5>Ningún video es de nuestra propiedad</h5>
+  <h5>Este Ejercicio fue añadido en la expansión 2.0</h5>
+  <br>
+  <footer>
+    <p>© 2024 Park&Son</p>
+    <p>Todos los derechos reservados</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.section-ruti-container');
+      const cantidad = 2;
+      fetch('ListaSectionRuti.html')
+        .then(res => res.text())
+        .then(html => {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
+          let ejercicios = Array.from(tempDiv.querySelectorAll('.section-ruti'));
+          ejercicios = shuffleArray(ejercicios).slice(0, cantidad);
+          container.innerHTML = '';
+          ejercicios.forEach(ej => {
+            container.appendChild(ej);
+          });
+        })
+        .catch(err => {
+          container.innerHTML = '<p style="color:red">No se pudieron cargar los ejercicios.</p>';
+          console.error(err);
+        });
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+    });
+    const currentTema = localStorage.getItem('tema') || 'oscuro';
+    updateStylesheets(currentTema);
+  </script>
+</body>
+</html>

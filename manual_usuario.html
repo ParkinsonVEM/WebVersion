@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Temas\temaOscuro\EstiloMain.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="temas.js"></script>
+  <title>AppVem</title>
+</head>
+<body>
+    <header>
+        <button><a href="Main.html"><span class="material-symbols-outlined">
+              home
+            </span></a></button>
+        <H1>Park&Son</H1>
+        <button><a href="Settings.html"><span class="material-symbols-outlined">
+              undo
+            </span></a></button>
+      </header>
+      <br>
+
+    <main>
+        <section>
+            <h2>Bienvenido a Park&Son</h2>
+            <p>Park&Son es una aplicación diseñada para ayudarte a mantener una vida activa y saludable a través de diferentes terapias y ejercicios. Este manual te guiará en el uso de todas las funciones disponibles.</p>
+        </section>
+
+        <section>
+            <h2>Inicio y Navegación</h2>
+            <ol>
+                <li>Al abrir la aplicación, encontrarás la página principal (Main) con acceso a todas las funciones.</li>
+                <li>En la parte superior encontrarás el menú de navegación para acceder a las diferentes secciones.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Terapias Disponibles</h2>
+
+            <article>
+                <h3>1. Yoga</h3>
+            </article>
+
+            <article>
+                <h3>2. Tai Chi</h3>
+            </article>
+
+            <article>
+                <h3>3. Chi Kung</h3>
+            </article>
+
+            <article>
+                <h3>4. Musicoterapia</h3>
+            </article>
+
+            <article>
+                <h3>5. Estiramientos</h3>
+            </article>
+
+            <article>
+                <h3>6. Meditación</h3>
+            </article>
+
+             <article>
+                <h3>7. LogoPedia</h3>
+            </article>
+
+             <article>
+                <h3>8. ArteTerapia</h3>
+            </article>
+
+             <article>
+                <h3>9. Risoterapia</h3>
+            </article>
+        </section>
+
+        <section>
+            <h2>Funciones Adicionales</h2>
+
+            <article>
+                <h3>Recomendaciones</h3>
+                <ul>
+                    <li>Encuentra sugerencias de ejercicios específicos</li>
+                    <li>Rutinas recomendadas según tu nivel</li>
+                    <li>Terapias sugeridas para diferentes necesidades</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Temas</h3>
+                <ul>
+                    <li>Puedes cambiar entre tema claro y oscuro</li>
+                    <li>Ajusta la visualización según tu preferencia</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Más Información</h3>
+                <ul>
+                    <li>Sección "Más Nosotros" con información sobre el proyecto</li>
+                    <li>Información sobre Fundaparkinson</li>
+                    <li>Detalles sobre el Centro Curimagua</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Consejos de Uso</h2>
+            <ol>
+                <li>Comienza con ejercicios básicos y progresa gradualmente</li>
+                <li>Sigue las instrucciones de cada ejercicio cuidadosamente</li>
+                <li>Escoge las rutinas según tu nivel de energía y capacidad</li>
+                <li>Toma descansos cuando los necesites</li>
+                <li>Consulta con tu médico antes de comenzar nuevas rutinas</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Importante</h2>
+            <ul>
+                <li>Realiza los ejercicios en un espacio seguro y despejado</li>
+                <li>No fuerces ningún movimiento que cause dolor</li>
+                <li>Mantén una respiración constante durante los ejercicios</li>
+                <li>Hidrátate adecuadamente antes y después de las actividades</li>
+            </ul>
+        </section>
+    </main>
+
+   <!-- Footer -->
+  <footer>
+    <p>© 2024 Park&Son</p>
+    <p>Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+
+</body>
+</html>
