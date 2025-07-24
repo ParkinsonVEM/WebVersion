@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Temas\temaOscuro\EstiloEjercicio.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="temas.js"></script>
+    <title>AppVem</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <button><a href="Main.html"><span class="material-symbols-outlined">
+                    home
+                </span></a></button>
+        <H1>Park&Son</H1>
+        <button><a href="Taichi.html"><span class="material-symbols-outlined">
+            undo
+                </span></a></button>
+    </header>
+    <br>
+
+    <!-- Seccion Principal -->
+     <h1 class="TextoSeccion">Norte</h1>
+    <div class="section-ruti-container">
+        <div class="section-ruti">
+            <h2>Qishi</h2><br>
+            <iframe width="928" height="522" src="https://www.youtube.com/embed/KVXf-LIeCMI" title="01. Análisis del primer movimiento de la forma de Tai Chi Chuan ▒▒██Paso a Paso██▒▒." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="text-small">Es una postura que representa un estado de calma, neutralidad y vacío sin límites. 
+                <br></p>
+                <div class="section-sliders">
+                    <h4>Dificultad</h4>
+                    <div class="slider-container">
+                    <input type="range" id="SliderHabilidad" min="0" max="10" value="2" disabled>
+                    <span class="min-value"><span class="material-symbols-outlined">
+                        mood
+                        </span></span>
+                    <span class="max-value"><span class="material-symbols-outlined">
+                        sentiment_very_dissatisfied
+                        </span></span>
+                        <br>
+                    </div>
+                    <br>
+                    <h2>2 repeticiones</h2>
+                    <br>
+                </div>
+        </div>
+       <br>
+    
+       <div class="section-ruti">
+        <h2>Mabu</h2><br>
+        <iframe width="928" height="522" src="https://www.youtube.com/embed/hU5TPMvH1eY" title="POSTURA MABU - ¿La Realizas Correctamente?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="text-small">La postura Ma Bu, también conocida como postura del caballo, mejora el equilibrio y estabilidad.<br></p>
+            <div class="section-sliders">
+                <h4>Dificultad</h4>
+                <div class="slider-container">
+                <input type="range" id="SliderHabilidad" min="0" max="10" value="5" disabled>
+                <span class="min-value"><span class="material-symbols-outlined">
+                    mood
+                    </span></span>
+                <span class="max-value"><span class="material-symbols-outlined">
+                    sentiment_very_dissatisfied
+                    </span></span>
+                </div>
+                <br>
+                <h2>3 repeticiones</h2>
+                <br>
+            </div>
+
+    </div>
+    <br>
+    
+    <div class="section-ruti">
+        <h2>Abrazo al Árbol</h2><br>
+        <iframe width="928" height="522" src="https://www.youtube.com/embed/_X1SJq-UsMk" title="Ejercicios tai chi &quot;Abrazo del Arbol&quot; - Daniel Capello" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="text-small">Esta postura ayuda a desarrollar la conciencia de la verticalidad, enraizar el cuerpo y elongar la columna.<br></p>
+            <div class="section-sliders">
+                <h4>Dificultad</h4>
+                <div class="slider-container">
+                <input type="range" id="SliderHabilidad" min="0" max="10" value="5" disabled>
+                <span class="min-value"><span class="material-symbols-outlined">
+                    mood
+                    </span></span>
+                <span class="max-value"><span class="material-symbols-outlined">
+                    sentiment_very_dissatisfied
+                    </span></span>
+                </div>
+                <br>
+                <h2>3 repeticiones</h2>
+                <br>
+            </div>
+    </div>
+    </div>
+    <h5>Ningún video es de nuestra propiedad</h5>
+<br>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Park&Son</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+    <script>
+        const container = document.querySelector('.section-ruti-container');
+const sections = document.querySelectorAll('.section-ruti');
+
+container.addEventListener('scroll', () => {
+  const scrollLeft = container.scrollLeft;
+  const currentSection = sections[ Math.floor(scrollLeft / container.offsetWidth) ];
+
+  sections.forEach((section) => section.classList.remove('active'));
+  currentSection.classList.add('active');
+});
+    </script>
+
+</body>
+
+</html>

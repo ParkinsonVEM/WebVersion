@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Temas\temaOscuro\EstiloSettings.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="temas.js"></script>
+  <title>AppVem</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <button><a href="Main.html"><span class="material-symbols-outlined">
+          home
+        </span></a></button>
+    <H1>Park&Son</H1>
+    <button><a href="ExpansionInfo.html"><span class="material-symbols-outlined">
+      engineering
+    </span></a></button>
+  </header>
+  <br>
+
+  <!-- Titulo -->
+
+<h1 class="TextoSeccion">Configuraciones</h1>
+
+  <!-- Botones -->
+
+  <div class="setting">
+    <div>
+      <a id="temas" href="">
+        <h4>Cambiar el Tema: <span id="temaActual">Oscuro</span></h4>
+      <span class="material-symbols-outlined">
+      palette
+      </span>
+      </a>
+    </div>
+
+  </div>
+
+  <br>
+
+ 
+  <div class="setting">
+    <div>
+      <a href="manual_usuario.html">
+        <h4>Manual de usuario</h4>
+      <span class="material-symbols-outlined">
+       social_distance
+      </span>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  
+ 
+  <div class="setting">
+    <div>
+      <a href="DescargoResponsabilidad.html">
+        <h4>Términos y Condiciones</h4>
+        <span class="material-symbols-outlined">
+          policy
+          </span>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Footer -->
+<footer>
+  <p>© 2024 Park&Son</p>
+  <p>Todos los derechos reservados</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const temaButton = document.getElementById('temas');
+    temaButton.addEventListener('click', toggleTema);
+    
+    // Actualizar el texto del tema actual
+    actualizarTextoTema();
+  });
+  
+  function actualizarTextoTema() {
+    const currentTema = localStorage.getItem('tema') || 'oscuro';
+    const temaActualSpan = document.getElementById('temaActual');
+    
+    // Mostrar el nombre del tema con la primera letra en mayúscula
+    const nombreTema = currentTema.charAt(0).toUpperCase() + currentTema.slice(1);
+    temaActualSpan.textContent = nombreTema;
+    
+    console.log(`Current tema en HTML: ${currentTema}`);
+    updateStylesheets(currentTema);
+  }
+  
+  // Inicializar tema
+  actualizarTextoTema();
+</script>
+
+</body>
+</html>

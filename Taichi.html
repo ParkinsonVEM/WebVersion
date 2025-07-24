@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Temas\temaOscuro\EstiloTerapia.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="temas.js"></script>
+    <title>AppVem</title>
+</head>
+ 
+<body>
+
+    <!-- Header -->
+    <header>
+        <button><a href="Main.html"><span class="material-symbols-outlined">
+                    home
+                </span></a></button>
+        <H1>Park&Son</H1>
+        <button><a href="RecoTerapias.html"><span class="material-symbols-outlined">
+          undo
+      </span></a></button>
+    </header>
+    <br>
+
+    <!-- Seccion Principal -->
+    <div class="section-1">
+        <h2>Tai Chi</h2>
+        <img src="img\taichi.jpg">
+        <p class="text-small">El Tai Chi es un arte marcial que practican millones de personas en todo el mundo debido a los múltiples beneficios 
+          que ofrece, tanto a nivel corporal como mental, por la parte de meditación que incluye.
+          <br><br>
+        <h2>¿Por qué el Tai Chi?</h2>
+        <p class="text-small">Ayudar a combatir los problemas de equilibrio con los movimientos lentos. Asimismo, disminuye el número de caídas y 
+          mejora la postura corporal.
+          </p>
+    </div>
+    <br>
+    
+    <h1 class="TextoSeccion">Nuestros Ejercicios</h1>
+    <div class="section-galeria">
+
+        <a href="ejTaichi1.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Qishi</h4>
+        </div>
+        </a>
+         
+        <a href="ejTaichi2.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Mabu</h4>
+        </div>
+        </a>
+
+        <a href="ejTaichi3.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Abrazo al Árbol</h4>
+        </div>
+        </a>
+    </div>
+    <br>
+
+    <div class="section-galeria">
+
+        <a href="ejTaichi4.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Cepillar la rodilla</h4>
+        </div>
+        </a>
+         
+        <a href="ejTaichi5.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Tocar el laúd</h4>
+        </div>
+        </a>
+
+        <a href="ejTaichi6.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Movimiento de nubes</h4>
+        </div>
+        </a>
+    </div>
+    <br>
+
+    <div class="section-galeria">
+
+        <a href="ejTaichi7.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Latigazo simple</h4>
+        </div>
+        </a>
+         
+        <a href="ejTaichi8.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Abrir el pecho</h4>
+        </div>
+        </a>
+
+        <a href="ejTaichi9.html">
+        <div>
+        <img src="img\taichi.jpg">
+        <h4 class="text-small">Elevar el agua</h4>
+        </div>
+        </a>
+    </div>
+    <br>
+
+    <h1 class="TextoSeccion">Rutinas</h1>
+
+    <div class="section-nos">
+
+        <div>
+          <a href="rutTaichi1.html">
+          <h3><span class="material-symbols-outlined">
+            physical_therapy
+            </span>Norte</h3>
+          </a>
+          </div>
+        <br>
+        
+        <div>
+          <a href="rutTaichi2.html">
+          <h3><span class="material-symbols-outlined">
+            physical_therapy
+            </span>Oeste</h3>
+          </a>
+        </div>
+        <br>
+      
+        <div>
+          <a href="rutTaichi3.html">
+          <h3><span class="material-symbols-outlined">
+            physical_therapy
+            </span>Sur</h3>
+          </a>
+        </div>
+        <br>
+      
+        <div>
+          <a href="rutTaichi4.html">
+          <h3><span class="material-symbols-outlined">
+            physical_therapy
+            </span>Este</h3>
+          </a>
+        </div>
+        </div>
+        <br>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Park&Son</p>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // No necesitamos buscar el botón de temas en esta página
+  });
+  
+  // Inicializar el tema actual
+  const currentTema = localStorage.getItem('tema') || 'oscuro';
+  console.log(`Current tema en HTML: ${currentTema}`);
+  updateStylesheets(currentTema);
+</script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
